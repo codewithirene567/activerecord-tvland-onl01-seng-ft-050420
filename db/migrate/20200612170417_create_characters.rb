@@ -1,10 +1,10 @@
 class CreateCharacters < ActiveRecord::Migration[5.2]
   def change
-    create_table :characters do |t|
+    create_table :characters do |c|
       t.string :name
-      t.integer :actor_id
-      t.integer :show_id
       t.string :catchphrase
+      t.integer :show_id
+      t.integer :actor_id
     end
   end
 end
