@@ -3,6 +3,6 @@ class Show < ActiveRecord::Base
 
   def actors_list
     actor.collect do |actor|
-    Actor.full_name
+    Actor.full_name = show.name
   end
 end
