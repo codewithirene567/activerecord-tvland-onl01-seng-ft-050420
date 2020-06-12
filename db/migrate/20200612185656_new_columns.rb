@@ -1,5 +1,5 @@
 class NewColumns < ActiveRecord::Migration[5.2]
   def change
-    add_column
+    add_column :day, :season, :strings
   end
 end
