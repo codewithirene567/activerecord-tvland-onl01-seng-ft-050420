@@ -5,4 +5,5 @@ class Show < ActiveRecord::Base
     actor.collect do |actor|
     Actor.full_name = show.name
   end
+  end
 end
