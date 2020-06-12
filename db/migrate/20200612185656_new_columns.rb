@@ -1,4 +1,4 @@
-class NewColumns < ActiveRecord::Migration[5.2]
+class Add < ActiveRecord::Migration[5.2]
   def change
     add_column :day, :season, :string
   end
