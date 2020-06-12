@@ -10,11 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2020_06_12_170417) do
+
+  create_table "actors", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+  end
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.string "catchphrase"
+    t.integer "show_id"
+    t.integer "actor_id"
+  end
 
   create_table "networks", force: :cascade do |t|
     t.string "call_letters"
     t.integer "channel"
+  end
+
+  create_table "shows", force: :cascade do |t|
+    t.string "name"
+    t.string "genre"
+    t.integer "network_id"
   end
 
 end
